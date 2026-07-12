@@ -2334,12 +2334,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // تحميل البيانات أولاً لضمان وجود حساب admin
   loadData();
   ensureAuth();
-  // إذا كانت هناك جلسة نشطة، افتح التطبيق مباشرة، وإلا اعرض تسجيل الدخول
-  if (isLoggedIn()) {
-    showApp();
-  } else {
-    showLogin();
-  }
+  // نسخة تجريبية: تخطي صفحة تسجيل الدخول وفتح البرنامج مباشرة
+  showApp();
 });
 
 document.getElementById('modalOverlay').addEventListener('click', (e) => {
